@@ -1,9 +1,11 @@
-#include <iostream>
-#include <map>
-#include <string>
-#include <sstream>
 #include <direct.h>
 #include <windows.h>
+
+#include <iostream>
+#include <map>
+#include <sstream>
+#include <string>
+
 #include "highprec.hpp"
 #define CHECK_NUM int
 using std::stringstream;
@@ -41,28 +43,27 @@ void init_settings() {
     global_args.insert(std::pair<std::string, CHECK_NUM>("--add", 2));
 }
 
-inline int read(){
+inline int read() {
     int val = 0;
     int flg = 1;
     char ch = (char)getchar();
-    while(ch<'0'||ch>'9'){
-        if(ch=='-')
-            flg=0;
+    while (ch < '0' || ch > '9') {
+        if (ch == '-') flg = 0;
         ch = (char)getchar();
     }
     while (ch >= '0' && ch <= '9') {
         val = (val << 1) + (val << 3) + (ch ^ 48);
         ch = (char)getchar();
     }
-    return (flg?val:~(val-1));
-}//快读
+    return (flg ? val : ~(val - 1));
+}  //快读
 
 inline stringstream q_read() {
     std::stringstream s;
-    char a=(char)getchar();
-    while(a!=' '){
+    char a = (char)getchar();
+    while (a != ' ') {
         s << a;
-        a=getchar();
+        a = getchar();
     }
     return s;
 }
@@ -73,28 +74,36 @@ void process_agrs(char const* a) {
     using std::endl;
     std::string ags(a);
     switch (global_args[ags]) {
-        case 0:
+        case 0: {
             setConsoleColor("green");
-            std::cout << "Golden-Touch build version " << version_num <<endl;
+            std::cout << "Golden-Touch build version " << version_num << endl;
             backToDefautColor();
             break;
-        case 1:
+        }
+
+        case 1: {
             setConsoleColor("red");
-            std::cout << "fatal error: Custom settings are temporarily unavailable. Install ";
+            std::cout << "fatal error: Custom settings are temporarily "
+                         "unavailable. Install ";
             setConsoleColor("green");
             std::cout << "INSIDER";
             setConsoleColor("red");
             std::cout << " version golden touch to preview." << endl;
             backToDefautColor();
             break;
-        case 2:
-            //highint a; highint b;
+        }
+
+        case 2: {
+            // highint a; highint b;
             break;
-        default:
+        }
+
+        default: {
             setConsoleColor("red");
             std::cout << "fatal error: unknow command args." << endl;
             backToDefautColor();
             break;
+        }
     }
 }
 int main(int argc, char const* argv[]) {
