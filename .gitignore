@@ -1,4 +1,6 @@
 .vscode/
+bin/
 *.exe
 a.txt
 *.class
+!tograph.class
