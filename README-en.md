@@ -1,4 +1,6 @@
 # Golden-Touch for Minecraft players
+[简体中文](README.md) | [English](README-en.md)
+
 This is a tool to simulate Minecraft commands in the terminal (cmd, powershell or bash)
 
 # basic introduction

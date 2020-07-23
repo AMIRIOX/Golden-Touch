@@ -1,4 +1,6 @@
 # 提供给Minecraft玩家的Golden-Touch
+[English](README-en.md) | [简体中文](README.md)
+
 这是在终端（cmd，powershell或bash）中模拟Minecraft命令的工具
 
 # 简单介绍
