@@ -16,24 +16,36 @@ This is a tool to simulate Minecraft commands in the terminal (cmd, powershell o
 
 # how to use:
 ## prep works:
-* If it is a Linux distribution such as Ubuntu/Debian, no additional work is required
-* If you need to install the corresponding platform version of git for Windows/macOS, please pay attention to adding environment variables to /usr/bin/ in the git installation directory, and install the clang or gcc compiler
-* First clone the warehouse (use the `cnpmjs` image to speed up):
+* If it is a Linux distribution such as Ubuntu/Debian, no additional work is required  
+* If you need to install the corresponding platform version of git for Windows/macOS, please pay attention to adding environment variables to /usr/bin/ in the git installation directory, and install the clang or gcc compiler   
+* First clone the warehouse (use the `cnpmjs` image to speed up):  
 ```bash
 $ git clone https://github.com.cnpmjs.org/AMIRIOX/Golden-Touch.git gdtch
 $ cd gdtch
 ```
 
 ## Compile and use
-Currently, cmake compilation or free script compilation is not supported.
-Please compile manually.
-Take summon.cpp as an example: (you can replace `clang++` with `g++`)
+Currently, cmake compilation or free script compilation is not supported.   
+Please compile manually.   
+Take summon.cpp as an example: (you can replace `clang++` with `g++`)   
+**If your operating system is Windows, please use -D WIN32 when compiling or use g++ compiler directly**   
+**At the same time, you also need to add `-L. {Your ShLwApi.Lib location}/x64/ShLwApi.Lib`**   
+Linux/macOS:   
 ```
 $ cd instructions
-$ clang ++ ./summon.cpp -o ../bin/summon.exe
-$ ./summon wither 2
-$ ./summon wolf 1
+$ clang++ ./summon.cpp -o ../bin/summon -std=c++11
+$ ../bin/summon wither 2
+$ ../bin/summon wolf 1
 ```
+Windows:   
+```
+> cd instructions
+> g++ summon.cpp -o ../bin/summon.exe -std=c++11 -L. {location of your ShLwApi.Lib}/x64/ShLwApi.Lib
+> cd bin
+> summon wither 2
+> summon wolf 3
+```
+In addition, what you need to pay attention to under Windows is that generally {the location of your ShLwApi.Lib} will have `Windows Kits` (including spaces), then you need to write `Windows" "Kits`
 
 # How to contribute
 * Fork this warehouse, modify the code, and submit a pull request
