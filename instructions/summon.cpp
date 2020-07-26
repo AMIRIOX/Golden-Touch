@@ -79,10 +79,6 @@ void init_env() {
     platform = os::UNIX;
 #endif
 }
-/*
-{"cat ../static/entities_text_graph/wither.txt"},
-{"cat ../static/entities_text_graph/wolf.txt"}
-*/
 std::string getCurPath() {
     if(platform == os::WINDOWS) {
         // // CHAR c[MAX_PATH];
@@ -132,11 +128,14 @@ std::string getCurPath() {
 void init_entities(std::map<std::string, int>& ent) {
     ent.insert(std::pair<std::string, int>("wither",0));
     ent.insert(std::pair<std::string, int>("wolf",1));
+    ent.insert(std::pair<std::string, int>("ender_dragon",2));
     std::string dir = getCurPath();
     std::string wolf = std::string("cat ") + dir + std::string("/../static/entities_text_graph/wolf.txt");
     std::string wither = std::string("cat ") + dir + std::string("/../static/entities_text_graph/wither.txt");
+    std::string ender_dragon = std::string("cat ") + dir + std::string("/../static/entities_text_graph/ender_dragon.txt");
     ent_graph.push_back(wither);
     ent_graph.push_back(wolf);
+    ent_graph.push_back(ender_dragon);
 }
 int main(int argc, char* const argv[]) {
     // // entity ent(argv[1]);

@@ -2,6 +2,7 @@
 [English](README-en.md) | [简体中文](README.md)
 
 这是在终端（cmd，powershell或bash）中模拟Minecraft命令的工具   
+声明: 图片等素材来源于[https://minecraft-zh.gamepedia.com](https://minecraft-zh.gamepedia.com), 这些图片文件的著作权属于[Mojang Studios](https://minecraft-zh.gamepedia.com/Mojang_Studios/), 侵权请联系删除。
 
 # 简单介绍
 <details>
@@ -45,6 +46,7 @@ Windows:
 > summon wolf 3
 ```
 另外,您需要在Windows下注意的是, 一般{您的ShLwApi.Lib所在位置}都会有`Windows Kits`(包含空格),则您需要写成`Windows" "Kits`   
+我的ShLwApi.Lib在D:/Windows" "Kits/10/Lib/10.0.18362.0/um/x64/ShLwApi.Lib
 
 # 如何贡献
 * fork本仓库, 修改代码, 提交`pull request`

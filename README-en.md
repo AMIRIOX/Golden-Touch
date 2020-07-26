@@ -2,6 +2,7 @@
 [简体中文](README.md) | [English](README-en.md)
 
 This is a tool to simulate Minecraft commands in the terminal (cmd, powershell or bash)
+Disclaimer: Pictures and other materials come from [https://minecraft-zh.gamepedia.com](https://minecraft-zh.gamepedia.com), the copyright of these picture files belongs to [Mojang Studios](https://minecraft -zh.gamepedia.com/Mojang_Studios/), please contact to delete infringement.
 
 # basic introduction
 <details>
