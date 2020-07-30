@@ -26,7 +26,20 @@ $ cd gdtch
 ```
 
 ## Compile and use
-Currently, cmake compilation or free script compilation is not supported.   
+> news: script compilation is already supported~ 
+
+Note, if you are a Windows operating system, please:   
+     * Enter the `instructions` directory and modify `cmpl.sh`        
+     * Change `D:/Windows" "Kits/..../ShLwApi.Lib` after `-L.` in line 10 (the line with g++) to your `ShLwApi.Lib` directory    
+     * Install git, please pay attention to whether your git supports running bash shell scripts   
+Otherwise, you don't need to do any preparations.    
+Open the bash terminal in the project root directory and enter    
+```bash
+$ ./instructions/cmpl.sh
+$ ./bin/say hello-world I-love-golden-touch
+$ ./bin/summon wither 3
+```
+<!--Currently, cmake compilation or free script compilation is not supported.   
 Please compile manually.   
 Take summon.cpp as an example: (you can replace `clang++` with `g++`)   
 **If your operating system is Windows, please use -D WIN32 when compiling or use g++ compiler directly**   
@@ -46,7 +59,7 @@ Windows:
 > summon wither 2
 > summon wolf 3
 ```
-In addition, what you need to pay attention to under Windows is that generally {the location of your ShLwApi.Lib} will have `Windows Kits` (including spaces), then you need to write `Windows" "Kits`
+In addition, what you need to pay attention to under Windows is that generally {the location of your ShLwApi.Lib} will have `Windows Kits` (including spaces), then you need to write `Windows" "Kits`-->
 
 # How to contribute
 * Fork this warehouse, modify the code, and submit a pull request

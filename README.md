@@ -26,7 +26,20 @@ $ cd gdtch
 ```
 
 ## 编译和使用
-当前不支持cmake编译或自动化脚本编译(已加入开发计划), 请手动编译.     
+> news: 已经支持了脚本编译~ 
+
+注意, 如果您是Windows操作系统, 请:   
+    * 进入`instructions`目录,修改`cmpl.sh`    
+    * 将第10行(带有g++的一行)中的`-L.`后的 `D:/Windows" "Kits/..../ShLwApi.Lib`改为您的`ShLwApi.Lib`目录    
+    * 装好git, 请注意您的git是否支持运行bash shell脚本    
+否则 您不需要做任何准备工作.      
+在项目根目录下打开bash终端, 输入    
+```bash
+$ ./instructions/cmpl.sh
+$ ./bin/say hello-world I-love-golden-touch
+$ ./bin/summon wither 3
+```
+<!--当前不支持cmake编译或自动化脚本编译(已加入开发计划), 请手动编译.     
 以summon.cpp为例: (您可以将`clang++`替换为`g++`)       
 **如果您的操作系统是Windows,请在编译时使用-D WIN32或直接使用g++编译器**   
 **同时,您还需要加入`-L. {您的ShLwApi.Lib所在位置}/x64/ShLwApi.Lib`**   
@@ -46,7 +59,7 @@ Windows:
 > summon wolf 3
 ```
 另外,您需要在Windows下注意的是, 一般{您的ShLwApi.Lib所在位置}都会有`Windows Kits`(包含空格),则您需要写成`Windows" "Kits`   
-我的ShLwApi.Lib在D:/Windows" "Kits/10/Lib/10.0.18362.0/um/x64/ShLwApi.Lib
+我的ShLwApi.Lib在D:/Windows" "Kits/10/Lib/10.0.18362.0/um/x64/ShLwApi.Lib-->
 
 # 如何贡献
 * fork本仓库, 修改代码, 提交`pull request`
