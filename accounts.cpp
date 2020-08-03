@@ -19,13 +19,14 @@ public:
         //! throw exceptions in exceptions.hpp:
         //* accountExist - 账户已存在
         //* invalidAccountName - 不被允许的账户名
-        //* 权限不足等其他问题
+        //* insuffPermissions - 权限不足
+        
     }
     void logout(string name) {
         // TODO: 注销账户. 只有DEBUGGER和ADMIN可以注销任何账户
         // PRO账户可以注销USER账户, 反之不可行
         //! throw exceptions:
-        //* 权限不足;
+        //* insuffPermissions - 权限不足
         //* 账户不存在 
     }
     void rename(string oldName, string name) {
